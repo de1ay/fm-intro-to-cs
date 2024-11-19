@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	iterativesorts "github.com/de1ay/fm-intro-to-cs/go/src/iterative_sorts"
+	"github.com/de1ay/fm-intro-to-cs/go/src/recursion"
 )
 
 func main() {
@@ -14,5 +15,7 @@ func main() {
   arr = []int{6, 1, 10, -1, 0, 1, 5, 100}
   iterativesorts.InsertionSort(arr)
   fmt.Printf("insertion_sort: %v\n", arr)
+
+  fmt.Printf("factorial of 5: %d\n", recursion.Factorial(5))
 }
 
