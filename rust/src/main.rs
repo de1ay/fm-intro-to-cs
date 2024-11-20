@@ -11,4 +11,8 @@ fn main() {
     println!("insetion_sort: {:?}", nums);
 
     println!("factorial of 5: {}", recursion::factorial::factorial(5));
+
+    let mut nums = vec![10, -1, 1, 0, 43, 44, 4, 6];
+    nums = recursion::merge_sort::merge_sort(nums);
+    println!("merge_sort: {:?}", nums);
 }
