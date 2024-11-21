@@ -15,4 +15,8 @@ fn main() {
     let mut nums = vec![10, -1, 1, 0, 43, 44, 4, 6];
     nums = recursion::merge_sort::merge_sort(nums);
     println!("merge_sort: {:?}", nums);
+
+    let mut nums = vec![10, -1, 1, 0, 43, 44, 4, 6];
+    nums = recursion::quick_sort::quick_sort(nums);
+    println!("quick_sort: {:?}", nums);
 }
