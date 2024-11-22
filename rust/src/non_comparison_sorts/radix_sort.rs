@@ -7,7 +7,7 @@ fn get_max_digit_index(nums: &Vec<i32>) -> usize {
         }
     }
 
-    return max_num.to_string().len();
+    return max_num.to_string().len() - 1;
 }
 
 fn get_digit_by_index(num: &i32, index: usize) -> usize {
@@ -28,7 +28,7 @@ pub fn radix_sort(nums: Vec<i32>) -> Vec<i32> {
     let mut arr = nums.to_vec();
 
     let max_digit_index = get_max_digit_index(&arr);
-    for i in 0..max_digit_index {
+    for i in 0..max_digit_index + 1 {
         for num in &arr {
             let digit_index = get_digit_by_index(num, i);
             buckets[digit_index].push(*num);
