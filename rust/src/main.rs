@@ -1,5 +1,6 @@
 mod iterative_sorts;
 mod recursion;
+mod non_comparison_sorts;
 
 fn main() {
     let mut nums = vec![10, -1, 1, 0, 43, 44, 4, 6];
@@ -19,4 +20,8 @@ fn main() {
     let mut nums = vec![10, -1, 1, 0, 43, 44, 4, 6];
     nums = recursion::quick_sort::quick_sort(nums);
     println!("quick_sort: {:?}", nums);
+
+    let mut nums = vec![10, 11, 1, 0, 43, 44, 4, 6];
+    nums = non_comparison_sorts::radix_sort::radix_sort(nums);
+    println!("radix_sort: {:?}", nums);
 }
