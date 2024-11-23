@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	binarysearch "github.com/de1ay/fm-intro-to-cs/go/src/binary_search"
 	iterativesorts "github.com/de1ay/fm-intro-to-cs/go/src/iterative_sorts"
 	noncomparisonsorts "github.com/de1ay/fm-intro-to-cs/go/src/non_comparison_sorts"
 	"github.com/de1ay/fm-intro-to-cs/go/src/recursion"
@@ -30,4 +31,8 @@ func main() {
 	arr = []int{6, 1, 10, 21, 0, 1, 5, 100}
 	noncomparisonsorts.RadixSort(arr)
 	fmt.Printf("radix_sort: %v\n", arr)
+
+	arr = []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100}
+	index := binarysearch.BinarySearch(arr, 100)
+	fmt.Printf("binary_search (expected 11): %d\n", index)
 }
